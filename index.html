@@ -8,6 +8,8 @@
 	<link rel="stylesheet" href="src/css/style.css">
 	<link rel="stylesheet" href="src/css/normalice.css">
 
+	<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
 	<link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
 
 	<script src="https://kit.fontawesome.com/81bdcc7ff8.js"></script>
@@ -33,10 +35,6 @@
 				    	<p id="timer-secs" class="timer__round">
 							<span class="timer__label">Seg</span>
 				    	</span>
-			      <!--   <span id="timer-days" class="timer__round"></span>
-			        <span id="timer-hours" class="timer__round"></span>
-			        <span id="timer-mins" class="timer__round"></span>
-			        <span id="timer-secs" class="timer__round"></span> -->
 			    </div>				
 			</div>
 			<div class="feature__event__title">
@@ -66,8 +64,64 @@
 	    </div>
 	</section>
 	<section class="events__featured">
+		<h2><i class="fa fa-calendar"></i> Proximos eventos</h2>
 		
+		<div class="event__card" data-flickity='{ "groupCells": true, "wrapAround": true}'>
+		  <div class="event__card--item">
+		  	<img src="https://picsum.photos/id/453/600/300" alt="">
+		  </div>
+		  <div class="event__card--item">
+		  	<img src="https://images.unsplash.com/photo-1445965752525-ac2d3c195ffe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjF9&auto=format&fit=crop&w=1567&q=80" alt="">
+		  </div>
+		  <div class="event__card--item">
+		  	<img src="https://images.unsplash.com/photo-1466253985008-19ae27987e03?ixlib=rb-1.2.1&auto=format&fit=crop&w=1489&q=80">
+		  </div>
+		</div>
 	</section>
+
+<footer class="item footer bg__blue p-1 footer--grid wrapper--inner">
+    <div class="ticketeg__info">
+        <center>
+            <img src="assets/img/logo.svg" alt="" class="footer__logo">
+        </center>
+        <strong>TICKETEG</strong> es la marca más grande en producción de tickets, software y herramientas para la organización de eventos públicos y privados en Bolivia.
+    </div>
+    <div class="ticketeg__about">
+        <h2>Conocenos</h2>
+        <ul class="list__none">
+            <li><a href="#">Acerca de nosotros</a></li>
+            <li><a href="#">Nuestros productos</a></li>
+            <li><a href="#">Compra con Multipagos</a></li>
+        </ul>
+    </div>
+    <div class="ticketeg__contact">
+        <h2>¿Eres organizador?</h2>
+        <ul class="list__none">
+            <li><a href="#">Nuestro servicios</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+        <div class="social">
+            <a href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+            <a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+            <a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+            <a href="#"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+        </div>
+    </div>
+    <!--             <div class="ticketeg__social">
+                
+            </div> -->
+    <div class="ticketeg__payments">
+        <i class="fab fa-cc-stripe fa-2x"></i>
+        <i class="fab fa-cc-paypal fa-2x"></i>
+        <i class="fab fa-cc-discover fa-2x"></i>
+        <i class="fab fa-cc-mastercard fa-2x"></i>
+        <i class="fab fa-cc-visa fa-2x"></i>
+    </div>
+    <div class="ticketeg__copy">
+        Santa Cruz de la Sierra, Bolivia - © Ticketeg 2019
+    </div>
+</footer>
+<script src="src/js/slide.js"></script>
 <script src="src/js/main.js"></script>
 </body>
 </html>
