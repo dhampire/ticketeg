@@ -7,8 +7,21 @@ h1, h2, h3, h4, h5, h6 {
 	color: #333;
 	font-weight: 400;
 }
+a {
+    background: transparent;
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    text-decoration: none;
+}
 
+a:hover{
 
+}*/
+/* +++++++++++++++++++
+     header
++++++++++++++++++++++++*/
 /* button*/ 
 .btn {
 	background: #ff00cc;  /* fallback for old browsers */
@@ -30,12 +43,16 @@ h1, h2, h3, h4, h5, h6 {
 	background: #8A2387;  /* fallback for old browsers */
 	background: -webkit-linear-gradient(to left, #F27121, #E94057, #8A2387);  /* Chrome 10-25, Safari 5.1-6 */
 	background: linear-gradient(to left, #F27121, #E94057, #8A2387); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
 }
 
 .bth:active{
 	transform: scale(2);
 }
+
+/* +++++++++++++++++++
+     header
++++++++++++++++++++++++*/
+
 
 
 
@@ -175,6 +192,86 @@ h1, h2, h3, h4, h5, h6 {
 		height:inherit;
 		border-radius:10px;
 	}
+
+
+/* partners */ 
+
+
+/* +++++++++++++++++++
+     pie de pagina
++++++++++++++++++++++++*/
+.footer {
+	padding: 2rem 5rem;
+	color: white;
+	background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+	}
+	.footer h2 {
+		color:white;
+	}
+	.footer ul {
+		padding:0;
+	}
+	.footer li{
+		list-style: none;
+	}
+	.footer a{
+		color:white;
+		text-decoration: none;
+	}
+	.footer__logo {
+		width: 180px;
+		height: auto;
+	}
+	.footer--grid{
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: repeat(3, auto);
+		grid-gap: 2rem;
+		grid-template-areas: 
+		"ticketeg__info ticketeg__info ticketeg__about ticketeg__contact" 
+		"ticketeg__payments ticketeg__payments ticketeg__payments ticketeg__payments" 
+		"ticketeg__copy ticketeg__copy ticketeg__copy ticketeg__copy"
+	}
+
+		@media (max-width: 480px) {
+			.footer--grid{
+				grid-template-columns: 1fr;
+				grid-template-areas:
+				"ticketeg__info"
+				"ticketeg__about"
+				"ticketeg__contact"
+				"ticketeg__payments"
+				"ticketeg__copy"
+				;
+			}
+		}
+	.ticketeg__info{
+		grid-area: ticketeg__info
+	}
+	.ticketeg__about{
+		grid-area: ticketeg__about
+	}
+	.ticketeg__contact{
+		grid-area: ticketeg__contact
+	}
+	.ticketeg__social{
+		grid-area: ticketeg__social
+	}
+	.ticketeg__payments{
+		grid-area: ticketeg__payments;
+		display: inline-block;
+		text-align: center;
+	}
+	.ticketeg__payments i {
+		margin: 0 0.5rem;
+	}
+	.ticketeg__copy{
+		grid-area: ticketeg__copy;
+		font-size: .75rem;
+		text-align: center;
+		font-style: italic;
+	}
+
 
 /* MEDIA */
 @media (min-width: 768px) and (max-width: 1024px) {
