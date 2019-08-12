@@ -2,6 +2,7 @@ body{
 	color: #ccc;
 	font-family: 'Poppins', sans-serif;
 	font-size: 16px;
+	overflow-x: hidden;
 }
 h1, h2, h3, h4, h5, h6 {
 	color: #333;
@@ -14,6 +15,7 @@ a {
     font-size: 100%;
     vertical-align: baseline;
     text-decoration: none;
+
 }
 
 a:hover{
@@ -50,7 +52,7 @@ a:hover{
      header
 +++++++++++++++++++++++*/
 .top__header{
-	background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+	background-image: linear-gradient(to right, #0071bc 0%, #001d3f 100%);
 	display:grid;
 	grid-template-columns: 1fr 1fr 32px;
 	padding:.2rem 5rem;
@@ -62,18 +64,174 @@ a:hover{
 }
 
 .header--btn{
-	background: #5bcf3a;
-	color: white;
+	background: #fce121;
+	color: #001d3f;
 }
+/* NAVBAR */
+#menuToggle
+{
+  display: block;
+  position: absolute;
+  top: 25px;
+  right: 50px;
+  
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #fff;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: white;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  opacity: 1;
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+.menu
+{
+  position: absolute;
+  width: 300px;
+  margin: -100px 0 0 0;
+  padding: 8rem 3rem;
+  right: -100px;
+  
+  background: rgba(0,0,0, .5);
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  
+  transform-origin: 0% 0%;
+  transform: translate(100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+
+}
+
+	.menu a{
+		color:white;
+	}
+.menu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+/*
+ * And let's fade it in from the left
+ */
+#menuToggle input:checked ~ ul
+{
+  transform: scale(1.0, 1.0);
+  opacity: 1;
+}
+
+
+/*************************
+SLIDE ***********************/
+.top__slide{
+	padding:3rem 2rem;
+	background:#e2e2e2;
+}
+
+	.carousel--cell{
+		max-width:250px;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 /* +++++++++++++++++++
      FEATURE 
 +++++++++++++++++++++++*/
-
-
-
 
 .feature__slide{
 	display: grid;
@@ -84,11 +242,13 @@ a:hover{
 }
 	.feature__event__img{
 		grid-column: 1 / span 2;
+		height:80vh;
 	}
 		.feature__event__img img{
-			display: block;
-			height: 80vh;
-			width: 100%;
+			-o-object-fit: cover;
+			object-fit: cover;
+			width:100%;
+			height:inherit;
 		}
 
 	.feature__event__info{
@@ -205,6 +365,10 @@ a:hover{
 		border-radius:10px;
 		margin-right: 1rem;
 	}
+		.event__card--slide{
+			width:20%;
+			margin-right:2rem;
+		}
 	.event__card--item img{
 		object-fit:cover;
 		width:100%;
@@ -212,7 +376,10 @@ a:hover{
 		border-radius:10px;
 	}
 
-
+.cta{
+	margin: 20vh auto;
+	text-align:center;
+}
 /* partners */ 
 
 
@@ -294,6 +461,10 @@ a:hover{
 
 /* MEDIA */
 @media (min-width: 768px) and (max-width: 1024px) {
+.top__header{
+	padding: .5rem 1rem;
+}
+
 	.feature__event__img img{
 			width: 100%;
 			height: 80vh;
@@ -357,6 +528,14 @@ a:hover{
   
 }
 @media (min-width: 320px) and (max-width: 480px){
+.top__header{
+	grid-template-columns: 1fr;
+	padding:.2rem;
+}
+	.header--logo{
+		grid-column: 1 / -1;
+		justify-self: center;
+	}
 .feature__slide{
 	grid-template-columns: 1fr; 
 	height: 100vh;
