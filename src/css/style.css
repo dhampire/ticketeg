@@ -1,5 +1,5 @@
 body{
-	color: #ccc;
+	color: #888;
 	font-family: 'Poppins', sans-serif;
 	font-size: 16px;
 	overflow-x: hidden;
@@ -214,6 +214,31 @@ SLIDE ***********************/
 		max-width:250px;
 	}
 
+	.event__date{
+		background-blend-mode:multiply;
+		background: rgba(0, 0, 0, .5);
+		border-radius: 0 10px 0 10px;
+		color: white;
+		display:grid;
+		justify-items:center;
+		padding: .8rem;
+		position:absolute;
+		right:0;
+		top:0;
+		z-index: 2;
+	}
+		.event__date .fas{
+			font-size:1rem;
+			padding-top:1rem;
+		}
+		.date--day{
+			font-size:1.75rem;
+			line-height: .8;
+		}
+		.date--mon{
+			font-size:.75rem;
+		}
+
 
 
 /* event calendar*/ 
@@ -262,12 +287,17 @@ SLIDE ***********************/
 	.calendar__post{
 		padding:.5rem 1rem;
 	}
-	
-
-
-
-
-
+	.calendar__post h3{
+		margin-top:.5rem;
+	}
+		.post__date{
+			font-size:.8rem;
+			line-height:.5;
+		}
+			.post__date span{
+				color:#fb983b;
+				padding-right:.5rem;
+			}
 
 
 /* +++++++++++++++++++
@@ -607,7 +637,7 @@ SLIDE ***********************/
 			font-size: 1.5rem;
 		}
 			.timer__round{
-				border-radius: none;
+				border-radius: 0px;
 				border: none;
 				font-size: 1.5rem;
 				height: 25px;
