@@ -1,0 +1,51 @@
+.top__event{
+	height:70vh;
+}
+	.event__info{
+		align-items: center;
+		background:#e2e2e2;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		padding:1.5rem 5rem;
+		color:#0f0f0f;
+	}
+		.event--buy{
+			justify-self:end;
+		}
+
+
+
+.wrapper__event{
+	display: grid;
+	grid-template-columns:repeat(3,1fr);
+	grid-gap:1rem;
+	padding:3rem 10rem;
+}
+	.content{
+		grid-column:1 / 3;
+	}
+	.content img{
+		margin:1rem 0;
+		border-radius:.25rem;
+	}
+	.share{
+		margin:2rem 0;
+	}
+		.share--social{
+			background:#e2e2e2;
+			font-size:1.2rem;
+			color:white;
+			padding:.5rem;
+			border-radius:.25rem;
+		}
+	.sidebar{
+		grid-column:3 / -1;
+		padding-left:5rem;
+	}
+		.widget{
+			margin-bottom:5rem;
+		}
+		.widget h4{
+			margin-top:0;
+		}
+
