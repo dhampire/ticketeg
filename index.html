@@ -18,32 +18,26 @@
 <!-- header / nav-->
 <header class="top__header">
 	<div class="header--logo">
-		<img src="src/img/ticketeg.svg" alt="Ticketeg">
+		<a href="index.html"><img src="src/img/ticketeg.svg" alt="Ticketeg"></a>
 	</div>
 	<div class="header--menu">
 		<a href="" class="btn header--btn">¿Organizas eventos?</a>
+		<a class="links" href="eventos.html">Eventos</a>
 
 	</div>
-	<div class="header--burguer" id="menuToggle">
-		<input type="checkbox">
-
+	<div class="nav" id="menuToggle">
+		<a href="#">
 			<span></span>
 			<span></span>
 			<span></span>
-			<ul class="menu">
-				<a href="#">
-					<li>About us</li>
-				</a>
-				<a href="#">
-					<li>Servicios</li>
-				</a>
-				<a href="#">
-					<li>Metodos de pago</li>
-				</a>
-				<a href="#">
-					<li>Contacto</li>
-				</a>
-			</ul>				
+		</a>
+		<div class="menu">
+			<ul>
+				<li>Home</li>
+				<li>Service</li>
+				<li>Contact</li>
+			</ul>
+		</div>			
 	</div>
 </header>
 
@@ -52,7 +46,7 @@
 	<section class="events__featured">		
 		<div class="event__card" data-flickity='{ "groupCells": true, "wrapAround": true}'>
 		  <div class="event__card--item event__card--slide">
-		  	<img src="https://picsum.photos/id/453/600/300" alt="">
+		  	<img class="img__cover" src="https://picsum.photos/id/453/600/300" alt="">
 		  	<div class="event__date">
 		  		<span class="date--mon">SEP</span>
 		  		<span class="date--day">
@@ -61,7 +55,7 @@
 			</div>
 		  </div>
 		  <div class="event__card--item event__card--slide">
-		  	<img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80" alt="">
+		  	<img class="img__cover" src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80" alt="">
 		  	<div class="event__date">
 		  		<span class="date--mon">NOV</span>
 		  		<span class="date--day">
@@ -70,7 +64,7 @@
 			</div>
 		  </div>
 		  <div class="event__card--item event__card--slide">
-		  	<img src="https://images.unsplash.com/photo-1466253985008-19ae27987e03?ixlib=rb-1.2.1&auto=format&fit=crop&w=1489&q=80">
+		  	<img class="img__cover" src="https://images.unsplash.com/photo-1466253985008-19ae27987e03?ixlib=rb-1.2.1&auto=format&fit=crop&w=1489&q=80">
 		  	<div class="event__date">
 		  		<span class="date--mon">OCT</span>
 		  		<span class="date--day">
@@ -79,7 +73,7 @@
 			</div>
 		  </div>
 		  <div class="event__card--item event__card--slide">
-		  	<img src="https://images.unsplash.com/photo-1465310477141-6fb93167a273?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80">
+		  	<img class="img__cover" src="https://images.unsplash.com/photo-1465310477141-6fb93167a273?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80">
 		  	<div class="event__date">
 		  		<span class="date--mon">OCT</span>
 		  		<span class="date--day">
@@ -88,7 +82,7 @@
 			</div>
 		  </div>
 		  <div class="event__card--item event__card--slide">
-		  	<img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80">
+		  	<img class="img__cover" src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80">
 		  	<div class="event__date">
 		  		<span class="date--mon">OCT</span>
 		  		<span class="date--day">
@@ -97,7 +91,7 @@
 			</div>
 		  </div>
 		  <div class="event__card--item event__card--slide">
-		  	<img src="https://images.unsplash.com/photo-1466253985008-19ae27987e03?ixlib=rb-1.2.1&auto=format&fit=crop&w=1489&q=80">
+		  	<img class="img__cover" src="https://images.unsplash.com/photo-1466253985008-19ae27987e03?ixlib=rb-1.2.1&auto=format&fit=crop&w=1489&q=80">
 		  	<div class="event__date">
 		  		<span class="date--mon">DIC</span>
 		  		<span class="date--day">
@@ -116,11 +110,11 @@
 
 	<section class="calendar">
 		<div class="calendar__cat">
-			<div class="calendar__title">
+			<div class="grid__title">
 				<h2><i class="fas fa-futbol"></i> Deporte</h2>			
 			</div>
 			<div class="calendar__cell badge">
-				<img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" />
+				<img class="img__cover" src="https://images.unsplash.com/photo-1517649763962-0c623066013b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" />
 				<div class="calendar__post">
 					<div class="post__date">
 						12 de Octubre, 2019
@@ -129,7 +123,7 @@
 				</div>
 			</div>
 			<div class="calendar__cell">
-				<img src="https://images.unsplash.com/photo-1483721310020-03333e577078?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1100&q=80" />
+				<img class="img__cover" src="https://images.unsplash.com/photo-1483721310020-03333e577078?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1100&q=80" />
 				<div class="calendar__post">
 					<div class="post__date">
 						12 de Octubre, 2019
@@ -138,7 +132,7 @@
 				</div>
 			</div>
 			<div class="calendar__cell">
-				<img src="https://images.unsplash.com/photo-1458372128312-1d1c1dd115e4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1189&q=80" />
+				<img class="img__cover" src="https://images.unsplash.com/photo-1458372128312-1d1c1dd115e4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1189&q=80" />
 				<div class="calendar__post">
 					<div class="post__date">
 						12 de Octubre, 2019
@@ -147,7 +141,7 @@
 				</div>
 			</div>
 			<div class="calendar__cell">
-				<img src="https://images.unsplash.com/photo-1465310477141-6fb93167a273?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" />
+				<img class="img__cover" src="https://images.unsplash.com/photo-1465310477141-6fb93167a273?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" />
 				<div class="calendar__post">
 					<div class="post__date">
 						12 de Octubre, 2019
@@ -159,11 +153,11 @@
 		</div>
 		<!-- Espectaculo -->
 		<div class="calendar__cat">
-			<div class="calendar__title">
+			<div class="grid__title">
 				<h2><i class="fas fa-ticket-alt"></i> Espectáculos</h2>			
 			</div>
 			<div class="calendar__cell">
-				<img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80" />
+				<img class="img__cover" src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80" />
 				<div class="calendar__post">
 					<div class="post__date">
 						12 de Octubre, 2019
@@ -172,7 +166,7 @@
 				</div>
 			</div>
 			<div class="calendar__cell">
-				<img src="https://images.unsplash.com/photo-1524187208855-b6c2f1e78bce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" />
+				<img class="img__cover" src="https://images.unsplash.com/photo-1524187208855-b6c2f1e78bce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" />
 				<div class="calendar__post">
 					<div class="post__date">
 						12 de Octubre, 2019
@@ -181,7 +175,7 @@
 				</div>
 			</div>
 			<div class="calendar__cell badge">
-				<img src="https://images.unsplash.com/photo-1506780789966-15774276e069?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1076&q=80" />
+				<img class="img__cover" src="https://images.unsplash.com/photo-1506780789966-15774276e069?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1076&q=80" />
 				<div class="calendar__post">
 					<div class="post__date">
 						12 de Octubre, 2019
@@ -190,7 +184,7 @@
 				</div>
 			</div>
 			<div class="calendar__cell">
-				<img src="https://images.unsplash.com/photo-1474432377109-8d2d5109c1d2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1049&q=80" />
+				<img class="img__cover" src="https://images.unsplash.com/photo-1474432377109-8d2d5109c1d2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1049&q=80" />
 				<div class="calendar__post">
 					<div class="post__date">
 						12 de Octubre, 2019
@@ -203,18 +197,18 @@
 
 		<!-- Conferencias -->
 		<div class="calendar__cat">
-			<div class="calendar__title">
+			<div class="grid__title">
 				<h2><i class="fas fa-coffee"></i> Conferencias</h2>			
 			</div>
 			<div class="calendar__cell calendar--50 calendar--one">
-				<img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80" />
+				<img class="img__cover" src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80" />
 				<div class="calendar__post">
 					<h3>Adobe Wordcamp Bolivia 2019</h3>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero molestiae aspernatur obcaecati sit suscipit numquam.</p>
 				</div>
 			</div>
 			<div class="calendar__cell calendar--50 calendar--two">
-				<img src="https://images.unsplash.com/photo-1560523160-754a9e25c68f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1440&q=80" />
+				<img class="img__cover" src="https://images.unsplash.com/photo-1560523160-754a9e25c68f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1440&q=80" />
 				<div class="calendar__post">
 					<h3>Conferecia internacional de diseño de interfaces</h3>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id aspernatur consectetur cumque quam, provident exceptur.</p>
@@ -281,13 +275,13 @@
 		
 		<div class="event__card" data-flickity='{ "groupCells": true, "wrapAround": true}'>
 		  <div class="event__card--item">
-		  	<img src="https://picsum.photos/id/453/600/300" alt="">
+		  	<img class="img__cover" src="https://picsum.photos/id/453/600/300" alt="">
 		  </div>
 		  <div class="event__card--item">
-		  	<img src="https://images.unsplash.com/photo-1445965752525-ac2d3c195ffe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjF9&auto=format&fit=crop&w=1567&q=80" alt="">
+		  	<img class="img__cover" src="https://images.unsplash.com/photo-1445965752525-ac2d3c195ffe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjF9&auto=format&fit=crop&w=1567&q=80" alt="">
 		  </div>
 		  <div class="event__card--item">
-		  	<img src="https://images.unsplash.com/photo-1466253985008-19ae27987e03?ixlib=rb-1.2.1&auto=format&fit=crop&w=1489&q=80">
+		  	<img class="img__cover" src="https://images.unsplash.com/photo-1466253985008-19ae27987e03?ixlib=rb-1.2.1&auto=format&fit=crop&w=1489&q=80">
 		  </div>
 		</div>
 	</section>
@@ -342,5 +336,6 @@
 </footer>
 
 <script src="src/js/slide.js"></script>
+<script src="src/js/main.js"></script>
 </body>
 </html>
