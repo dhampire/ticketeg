@@ -25,8 +25,8 @@ a:hover{
 /* button*/ 
 .btn {
 background: #fc4a1a;  /* fallback for old browsers */  /* Chrome 10-25, Safari 5.1-6 */
-background: -webkit-linear-gradient(to left, #fb983b, #fce121);
-background: -o-linear-gradient(to left, #fb983b, #fce121);
+background: -webkit-linear-gradient(right, #fb983b, #fce121);
+background: -o-linear-gradient(right, #fb983b, #fce121);
 background: linear-gradient(to left, #fb983b, #fce121); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	-webkit-transition: all 0.3s ease 0s;
 	border-radius: 1rem;
@@ -154,6 +154,7 @@ background: linear-gradient(to left, #fb983b, #fce121); /* W3C, IE 10+/ Edge, Fi
  */
 .menu
 {
+	display:none;
   position: absolute;
   width: 300px;
   margin: -100px 0 0 0;
@@ -619,12 +620,15 @@ SLIDE ***********************/
 }
 @media (min-width: 320px) and (max-width: 480px){
 .top__header{
-	grid-template-columns: 1fr;
+	grid-template-columns: 1fr 60px;
 	padding:.2rem;
 }
 	.header--logo{
-		grid-column: 1 / -1;
+		grid-column: 1 / span;
 		justify-self: center;
+	}
+	.header--menu{
+		display:none;
 	}
 .feature__slide{
 	grid-template-columns: 1fr; 
@@ -687,4 +691,7 @@ SLIDE ***********************/
 			.calendar--two{
 				grid-column: 2 / -1
 			}
+	.footer{
+		padding:1rem;
+	}
 }
