@@ -25,17 +25,15 @@
 		<a class="links" href="event.html">Eventos</a>
 
 	</div>
-	<div class="nav" id="menuToggle">
-		<a href="#">
+	<div class="nav">
 			<span></span>
 			<span></span>
 			<span></span>
-		</a>
 		<div class="menu">
 			<ul>
-				<li>Home</li>
-				<li>Service</li>
-				<li>Contact</li>
+				<li class="nav--link">Home</li>
+				<li class="nav--link">Service</li>
+				<li class="nav--link">Contact</li>
 			</ul>
 		</div>			
 	</div>
@@ -334,7 +332,21 @@
         Santa Cruz de la Sierra, Bolivia - © Ticketeg 2019
     </div>
 </footer>
+<script>
+  'use strict';
+  (function(){
+    var body = document.body;
+    var nav = document.getElementsByClassName('nav')[0];
+    var menu = document.getElementsByClassName('menu')[0];
 
+    nav.addEventListener('click', function toggleClasses(){
+      [body, menu, nav].forEach(function (el){
+        el.classList.toggle('open');
+      });
+    }, false);
+  })();
+
+</script>
 <script src="src/js/slide.js"></script>
 <script src="src/js/main.js"></script>
 </body>
