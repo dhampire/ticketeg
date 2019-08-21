@@ -562,6 +562,9 @@ SLIDE ***********************/
 .top__header{
 	padding: .5rem 1rem;
 }
+.menu{
+	width:50%;
+}
 	.calendar, .events__featured, .cta, .how__buy, .footer{
 		padding: 2rem 1rem;
 	}
@@ -596,6 +599,10 @@ SLIDE ***********************/
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
+.menu{
+	width:50%;
+}
+
 	.calendar, .events__featured, .cta, .how__buy, .footer{
 		padding: 2rem 1rem;
 	}
@@ -645,6 +652,11 @@ SLIDE ***********************/
 	.header--menu{
 		display:none;
 	}
+
+.menu{
+	width:100%;
+}
+
 .feature__slide{
 	grid-template-columns: 1fr; 
 	height: 100vh;
