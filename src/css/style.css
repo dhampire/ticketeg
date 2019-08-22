@@ -14,7 +14,7 @@ body:after{
   width:0;
 }
 body.open{
-  overflow: hidden;
+  overflow-x: hidden;
 }
 body.open:after{
   opacity:1;
@@ -53,6 +53,7 @@ background: linear-gradient(to left, #fb983b, #fce121); /* W3C, IE 10+/ Edge, Fi
 	-webkit-transition: all 0.3s ease 0s;
 	border-radius: 1rem;
 	border: none;
+	display:inline-block;
 	color: #001d3f;
 	cursor: pointer;
 	padding: .5rem 1.5rem;
@@ -67,8 +68,18 @@ background: linear-gradient(to left, #fb983b, #fce121); /* W3C, IE 10+/ Edge, Fi
 .bth:active{
 
 }
-
+	
 	.btn--secondary{
+		background: #fb983b;
+		color:white;
+	}
+	.btn--info{
+		background: transparent;
+		color:#888;
+		border-radius:0;
+		border-bottom:2px solid #888;
+	}
+	.btn--outline{
 		background: transparent;
 		color:#888;
 		border:1px solid #888;
@@ -84,6 +95,11 @@ background: linear-gradient(to left, #fb983b, #fce121); /* W3C, IE 10+/ Edge, Fi
 	.grid__title{
 		grid-column:1 / -1;
 	}
+
+.small{
+	font-size:.75rem;
+}
+
 /* +++++++++++++++++++
      header
 +++++++++++++++++++++++*/
@@ -144,6 +160,8 @@ background: linear-gradient(to left, #fb983b, #fce121); /* W3C, IE 10+/ Edge, Fi
     width:20%;
     z-index:5;
     padding-top: 5rem;
+    visibility:visible;
+    opacity:0;
   }
     .menu:not(.open){
       visibility:hidden;
@@ -151,7 +169,8 @@ background: linear-gradient(to left, #fb983b, #fce121); /* W3C, IE 10+/ Edge, Fi
   .menu li{
     color:white;
     list-style-type:none;
-    padding:1rem;
+    padding:0;
+    width:0;
     -webkit-transform: translateX(250px);
     -ms-transform: translateX(250px);
     -o-transform: translateX(250px);
@@ -165,8 +184,12 @@ background: linear-gradient(to left, #fb983b, #fce121); /* W3C, IE 10+/ Edge, Fi
   }
   .menu.open{
     visibility:visible;
+    opacity:1;
+    transition: visibility 0s, opacity 0.5s linear;
   }
   .menu.open li{
+  	width:auto;
+  	padding: 1rem;
     -webkit-transform: translateX(0);
     -ms-transform: translateX(0);
     -o-transform: translateX(0);
@@ -202,7 +225,6 @@ background: linear-gradient(to left, #fb983b, #fce121); /* W3C, IE 10+/ Edge, Fi
   font-family: Helvetica-Neue, Helvetica, Arial, sans-serif;
   font-size: 24px;
   font-weight: 300;
-  margin-left: 30px;
   text-decoration: none;
   transition: all 0.4s ease;
   width: auto;
@@ -263,7 +285,17 @@ SLIDE ***********************/
 		border-radius:10px;
 		position: relative;
 		z-index:0;
+		-webkit-box-shadow: 0 2px 0 #E8E8E8;
+		box-shadow: 0 2px 0 #E8E8E8;
 	}
+		.calendar__title{
+			grid-column:1 / -3;
+		}
+		.calendar__filter{
+			grid-column: 3 / -1;
+			justify-self:end;
+			align-self:center;
+		}
 		.calendar__cell img{
 			border-radius:10px 10px 0 0;
 			height:250px;
@@ -475,7 +507,7 @@ SLIDE ***********************/
 		}
 
 .cta{
-	margin: 20vh auto;
+	margin: 15vh auto;
 	text-align:center;
 }
 /* partners */ 
@@ -721,4 +753,7 @@ SLIDE ***********************/
 	.footer{
 		padding:1rem;
 	}
+		.calendar__title, .calendar__filter{
+			display:none;
+		}
 }
