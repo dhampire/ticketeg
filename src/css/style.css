@@ -736,6 +736,9 @@ SLIDE ***********************/
 	.calendar{
 		padding: 2rem 1rem;
 	}
+	.calendar__title, .calendar__filter{
+		grid-column: 1 / -1;
+	}
 		.calendar__cat{
 			grid-template-columns: 1fr 1fr;
 		}
@@ -757,7 +760,5 @@ SLIDE ***********************/
 	.footer{
 		padding:1rem;
 	}
-		.calendar__title, .calendar__filter{
-			display:none;
-		}
+
 }
