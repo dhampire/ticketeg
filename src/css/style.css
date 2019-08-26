@@ -738,7 +738,11 @@ SLIDE ***********************/
 	}
 	.calendar__title, .calendar__filter{
 		grid-column: 1 / -1;
+		justify-self:center;
 	}
+		.filter--title{
+			display:none
+		}
 		.calendar__cat{
 			grid-template-columns: 1fr 1fr;
 		}
