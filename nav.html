@@ -6,361 +6,16 @@
 	<title>Navbar</title>
 	<link rel="stylesheet" href="src/css/normalice.css" media="print" onload="this.media='all'">
 	<link rel="stylesheet" href="src/css/style.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.7/css/uikit.min.css" media="print" onload="this.media='all'"/>
 
-	<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css"media="print" onload="this.media='all'">
+	<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css" media="print" onload="this.media='all'">
 
 	<link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
 
 	<script src="https://kit.fontawesome.com/81bdcc7ff8.js"></script>
 </head>
 
-<style>
-@-webkit-keyframes slideInLeft {
-  0% {
-    -webkit-transform: translate3d(250px, 0, 0);
-            transform: translate3d(250px, 0, 0);
-    visibility: visible;
-  }
-  100% {
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
-  }
-}
-@keyframes slideInLeft {
-  0% {
-    -webkit-transform: translate3d(250px, 0, 0);
-            transform: translate3d(250px, 0, 0);
-    visibility: visible;
-  }
-  100% {
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
-  }
-}
-@-webkit-keyframes slideOutLeft {
-  0% {
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
-  }
-  100% {
-    -webkit-transform: translate3d(250px, 0, 0);
-            transform: translate3d(250px, 0, 0);
-    visibility: hidden;
-  }
-}
-@keyframes slideOutLeft {
-  0% {
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
-  }
-  100% {
-    -webkit-transform: translate3d(250px, 0, 0);
-            transform: translate3d(250px, 0, 0);
-    visibility: hidden;
-  }
-}
-* {
-  box-sizing: border-box;
-}
 
-body:after {
-  background: white;
-  content: '';
-  height: 100%;
-  left: 0;
-  opacity: 0;
-  overflow: auto;
-  padding: 0;
-  position: absolute;
-  top: 0;
-  transition: all 0.4s ease;
-  width: 100%;
-}
-body.open {
-  overflow: hidden;
-}
-body.open:after {
-  opacity: 1;
-  visibility: visible;
-}
-
-.menu {
-  position: absolute;
-  z-index: 11;
-  right:0;
-  height:100vh;
-  background:rgba(0,0,0,.8);
-
-}
-.menu:not(.open) {
-	display:none;
-	visibility: hidden;
-	  -webkit-animation-duration: 0.4s;
-	          animation-duration: 0.4s;
-	  -webkit-animation-fill-mode: both;
-	          animation-fill-mode: both;
-	  -webkit-animation-name: slideOutLeft;
-	          animation-name: slideOutLeft;  
-}
-.menu li {
-  color: #444444;
-  list-style-type: none;
-  padding: 10px;
-  text-align: left;
-  -webkit-transform: translateX(-250px);
-          transform: translateX(-250px);
-}
-.menu li:not(.open) {
-  -webkit-animation-duration: 0.4s;
-          animation-duration: 0.4s;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  -webkit-animation-name: slideOutLeft;
-          animation-name: slideOutLeft;
-}
-.menu li:first-child {
-  padding-top: 120px;
-}
-.menu.open {
-  visibility: visible;
-}
-.menu.open li {
-  -webkit-animation-duration: 0.4s;
-          animation-duration: 0.4s;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  -webkit-animation-name: slideInLeft;
-          animation-name: slideInLeft;
-}
-
-	.b-link {
-	  background: transparent;
-	  border-right: rgba(68, 68, 68, 0) solid 2px;
-	  color: #444444;
-	  font-family: Helvetica-Neue, Helvetica, Arial, sans-serif;
-	  font-weight: 300;
-	  margin-right: 30px;
-	  text-decoration: none;
-	  transition: all 0.4s ease;
-	}
-	.b-link:hover, .b-link--active {
-	  border-right: #444444 solid 2px;
-	  padding-right: 30px;
-	}
-
-.nav {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: all 0.4s ease;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-.nav:hover {}
-
-.nav span {
-  background: white;
-  position: relative;
-  transition: all 0.4s ease;
-}
-.b-bun--top {
-  height: 2px;
-  top: 0;
-  width: 25px;
-}
-.b-bun--mid {
-  height: 2px;
-  top: 8px;
-  width: 25px;
-}
-.b-bun--bottom {
-  height: 2px;
-  top: 16px;
-  width: 25px;
-}
-
-
-.b-container {
-  height: 60px;
-  right: 30px;
-  position: absolute;
-  top: 30px;
-}
-.b-container:hover:not(.open) .bun-top,
-.b-container:hover:not(.open) .bun-mid,
-.b-container:hover:not(.open) .bun-bottom {
-  background: white;
-}
-.b-container.open .b-main {
-  border: #444444 solid 2px;
-}
-.b-container.open .b-bun--top {
-  background: #444444;
-  top: 9px;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-.b-container.open .b-bun--mid {
-  opacity: 0;
-}
-.b-container.open .b-bun--bottom {
-  background: #444444;
-  top: 5px;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-}
-.b-container.open .b-brand {
-  color: #444444;
-}
-
-
-.b-nav {
-  position: absolute;
-  z-index: 11;
-}
-.b-nav:not(.open) {
-  visibility: hidden;
-}
-.b-nav li {
-  color: #444444;
-  list-style-type: none;
-  padding: 10px;
-  text-align: left;
-  -webkit-transform: translateX(-250px);
-          transform: translateX(-250px);
-}
-.b-nav li:not(.open) {
-  -webkit-animation-duration: 0.4s;
-          animation-duration: 0.4s;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  -webkit-animation-name: slideOutLeft;
-          animation-name: slideOutLeft;
-}
-.b-nav li:first-child {
-  padding-top: 120px;
-}
-.b-nav.open {
-  visibility: visible;
-}
-.b-nav.open li {
-  -webkit-animation-duration: 0.4s;
-          animation-duration: 0.4s;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  -webkit-animation-name: slideInLeft;
-          animation-name: slideInLeft;
-}
-
-.b-link {
-  background: transparent;
-  border-left: rgba(68, 68, 68, 0) solid 2px;
-  color: #444444;
-  font-family: Helvetica-Neue, Helvetica, Arial, sans-serif;
-  font-size: 24px;
-  font-weight: 300;
-  margin-left: 30px;
-  text-decoration: none;
-  transition: all 0.4s ease;
-  width: auto;
-}
-.b-link:hover, .b-link--active {
-  border-left: #444444 solid 2px;
-  padding-left: 30px;
-}
-
-.b-menu {
-  background: white;
-  border: white solid 2px;
-  border-radius: 50%;
-  cursor: pointer;
-  display: inline-block;
-  height: 60px;
-  padding-left: 15.5px;
-  padding-top: 17.5px;
-  position: relative;
-  transition: all 0.4s ease;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  width: 60px;
-  z-index: 12;
-}
-.b-menu:hover {
-  border: #444444 solid 2px;
-}
-
-.b-bun {
-  background: #444444;
-  position: relative;
-  transition: all 0.4s ease;
-}
-.b-bun--top {
-  height: 2px;
-  top: 0;
-  width: 25px;
-}
-.b-bun--mid {
-  height: 2px;
-  top: 8px;
-  width: 25px;
-}
-.b-bun--bottom {
-  height: 2px;
-  top: 16px;
-  width: 25px;
-}
-
-.b-brand {
-  color: white;
-  font-family: Helvetica-Neue, Helvetica, Arial, sans-serif;
-  font-size: 24px;
-  font-weight: 300;
-  margin-left: 30px;
-  position: relative;
-  text-decoration: none;
-  top: -21.4285714286px;
-  transition: all 0.4s ease;
-  z-index: 13;
-}
-
-.b-container {
-  height: 60px;
-  left: 30px;
-  position: absolute;
-  top: 30px;
-}
-.b-container:hover:not(.open) .bun-top,
-.b-container:hover:not(.open) .bun-mid,
-.b-container:hover:not(.open) .bun-bottom {
-  background: white;
-}
-.b-container.open .b-main {
-  border: #444444 solid 2px;
-}
-.b-container.open .b-bun--top {
-  background: #444444;
-  top: 9px;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-.b-container.open .b-bun--mid {
-  opacity: 0;
-}
-.b-container.open .b-bun--bottom {
-  background: #444444;
-  top: 5px;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-}
-.b-container.open .b-brand {
-  color: #444444;
-}
-
-</style>
 <body>
 
 <header class="top__header">
@@ -385,8 +40,122 @@ body.open:after {
 </div>
 </header>
 
+
 </div>
 
 
+
+
+<style>
+.filterDiv {
+  float: left;
+  background-color: #2196F3;
+  color: #ffffff;
+  width: 100px;
+  line-height: 100px;
+  text-align: center;
+  margin: 2px;
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.container {
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+</style>
+<body>
+
+<h2>Filter DIV Elements</h2>
+
+<div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+  <button class="btn" onclick="filterSelection('cars')"> Cars</button>
+  <button class="btn" onclick="filterSelection('animals')"> Animals</button>
+  <button class="btn" onclick="filterSelection('fruits')"> Fruits</button>
+  <button class="btn" onclick="filterSelection('colors')"> Colors</button>
+</div>
+
+<div class="container">
+  <div class="filterDiv cars">BMW</div>
+  <div class="filterDiv colors fruits">Orange</div>
+  <div class="filterDiv cars">Volvo</div>
+  <div class="filterDiv colors">Red</div>
+  <div class="filterDiv cars animals">Mustang</div>
+  <div class="filterDiv colors">Blue</div>
+  <div class="filterDiv animals">Cat</div>
+  <div class="filterDiv animals">Dog</div>
+  <div class="filterDiv fruits">Melon</div>
+  <div class="filterDiv fruits animals">Kiwi</div>
+  <div class="filterDiv fruits">Banana</div>
+  <div class="filterDiv fruits">Lemon</div>
+  <div class="filterDiv animals">Cow</div>
+</div>
+
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("filterDiv");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
 </body>
 </html>

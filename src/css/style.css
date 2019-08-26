@@ -14,7 +14,7 @@ body:after{
   width:0;
 }
 body.open{
-  overflow-x: hidden;
+  overflow: hidden;
 }
 body.open:after{
   opacity:1;
@@ -239,8 +239,8 @@ SLIDE ***********************/
 	.carousel--cell{
 		border-radius: 10px 10px 0 0;
 		max-width:250px;
+		display: none;
 	}
-
 	.event__date{
 		background-blend-mode:multiply;
 		background: rgba(0, 0, 0, .5);
@@ -287,7 +287,11 @@ SLIDE ***********************/
 		z-index:0;
 		-webkit-box-shadow: 0 2px 0 #E8E8E8;
 		box-shadow: 0 2px 0 #E8E8E8;
+		display:none;
 	}
+		.event__show{
+			display:block;
+		}
 		.calendar__title{
 			grid-column:1 / -3;
 		}
