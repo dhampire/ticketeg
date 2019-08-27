@@ -15,30 +15,28 @@
 </head>
 <body>
 
-	<header class="top__header">
-		<div class="header--logo">
-			<a href="index.html"><img src="src/img/ticketeg.svg" alt="Ticketeg"></a>
-		</div>
-		<div class="header--menu">
-			<a href="" class="btn header--btn">¿Organizas eventos?</a>
-			<a class="links" href="event.html">Eventos</a>
+<header class="top__header">
+	<div class="header--logo">
+		<a href="index.html"><img src="src/img/ticketeg.svg" alt="Ticketeg"></a>
+	</div>
+	<div class="header--menu">
+		<a href="" class="btn header--btn">¿Organizas eventos?</a>
+		<a class="links" href="event.html">Eventos</a>
 
-		</div>
-		<div class="nav">
-			<a href="#">
-				<span></span>
-				<span></span>
-				<span></span>
-			</a>
-			<div class="menu">
-				<ul>
-					<li>Home</li>
-					<li>Service</li>
-					<li>Contact</li>
-				</ul>
-			</div>			
-		</div>
-	</header>
+	</div>
+	<div class="nav">
+			<span></span>
+			<span></span>
+			<span></span>
+		<div class="menu">
+			<ul>
+				<li class="nav--link">Home</li>
+				<li class="nav--link">Service</li>
+				<li class="nav--link">Contact</li>
+			</ul>
+		</div>			
+	</div>
+</header>
 	<!-- TOP EVENT HEADER -->
 	<section class="top__event">
 			<img class="img__cover" src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80" alt="">
@@ -71,11 +69,12 @@
 	            <div class="meta__footer">
 	            	Comparte
 	            	<div class="share">
-	            		<a class="share--social" href=""><i class="fab fa-facebook"></i></a>
-	            		<a class="share--social" href=""><i class="fab fa-facebook-messenger"></i></a>
-	            		<a class="share--social" href=""><i class="fab fa-whatsapp"></i></a>
-	            		<a class="share--social" href=""><i class="fab fa-linkedin-in"></i></a>
-	            		<a class="share--social" href=""><i class="fas fa-envelope"></i></a>
+	            		<a class="share--social" href=""><i class="fab fa-facebook facebook"></i></a>
+	            		<a class="share--social" href=""><i class="fab fa-facebook-messenger messenger"></i></a>
+	            		<a class="share--social" href=""><i class="fab fa-whatsapp whatsapp"></i></a>
+	            		<a class="share--social" href=""><i class="fab fa-twitter twitter"></i></a>
+	            		<a class="share--social" href=""><i class="fab fa-linkedin-in linkedin"></i></a>
+	            		<a class="share--social" href=""><i class="fas fa-envelope envelope"></i></a>
 	            	</div>
 	            </div>
 
@@ -85,13 +84,27 @@
             <!-- SIDEBAR --> 
             <div class="sidebar">
             	<div class="widget">
+            		<h4>Datos del organizador</h4>
+            		<ul>
+            			<li><i class="fa fa-angle-right"></i>  Nombre: Red Bull Bc One</li>
+            			<li><i class="fa fa-angle-right"></i>  Telefono: 7773355</li>
+            		</ul>
+	            	<div class="share">
+	            		<a class="share--social" href=""><i class="fab fa-whatsapp whatsapp"></i></a>
+	            		<a class="share--social" href=""><i class="fab fa-facebook facebook"></i></a>
+	            		<a class="share--social" href=""><i class="fab fa-instagram instagram"></i></a>
+	            		<a class="share--social" href=""><i class="fas fa-envelope envelope"></i></a>
+	            	</div>
+
+            	</div>
+            	<div class="widget">
             		<h4>Fecha y Hora</h4>
 					<p>2 de Octubre 2019</p>
 					<a class="btn btn--outline" href="#"><i class="fas fa-plus"></i> Add Calendar</a>
 				</div>
 				<div class="widget">
 					<h4>Ubicación</h4>
-					Av. Argomosa, Calle 2 esq. Cañoto #378					
+					<p>Av. Argomosa, Calle 2 esq. Cañoto #378</p>					
 				</div>
             </div>
         <!-- MAPA y OTROS-->
@@ -153,26 +166,6 @@
 	</main>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <footer class="footer footer--grid">
     <div class="ticketeg__info">
         <center>
@@ -215,5 +208,8 @@
         Santa Cruz de la Sierra, Bolivia - © Ticketeg 2019
     </div>
 </footer>
+
+<script src="src/js/slide.js"></script>
+<script src="src/js/main.js"></script>
 </body>
 </html>
