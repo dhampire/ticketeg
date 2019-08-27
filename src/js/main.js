@@ -46,7 +46,7 @@ function w3RemoveClass(element, name) {
 }
 
 // Add active class to the current button (highlight it)
-var btnContainer = document.getElementById("myBtnContainer");
+var btnContainer = document.getElementById("filterControl");
 var btns = btnContainer.getElementsByClassName("btn");
 for (var i = 0; i < btns.length; i++) {
   btns[i].addEventListener("click", function(){
@@ -58,38 +58,38 @@ for (var i = 0; i < btns.length; i++) {
 
 // //timer
 
-// var endDate = new Date("Sep 15, 2019 12:00:00").getTime();
+var endDate = new Date("Sep 15, 2019 12:00:00").getTime();
 
-// var timer = setInterval(function() {
+var timer = setInterval(function() {
 
-//     let now = new Date().getTime();
-//     let t = endDate - now;
+    let now = new Date().getTime();
+    let t = endDate - now;
     
-//     if (t >= 0) {
+    if (t >= 0) {
     
-//         let days = Math.floor(t / (1000 * 60 * 60 * 24));
-//         let hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-//         let mins = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
-//         let secs = Math.floor((t % (1000 * 60)) / 1000);
+        let days = Math.floor(t / (1000 * 60 * 60 * 24));
+        let hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        let mins = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+        let secs = Math.floor((t % (1000 * 60)) / 1000);
     
-//         document.getElementById("timer-days").innerHTML = days +
-//         "<span class='timer__label'>Días</span>";
+        document.getElementById("timer-days").innerHTML = days +
+        "<span class='timer__label'>Días</span>";
     
-//         document.getElementById("timer-hours").innerHTML = ("0"+hours).slice(-2) +
-//         "<span class='timer__label'>Hrs</span>";
+        document.getElementById("timer-hours").innerHTML = ("0"+hours).slice(-2) +
+        "<span class='timer__label'>Hrs</span>";
     
-//         document.getElementById("timer-mins").innerHTML = ("0"+mins).slice(-2) +
-//         "<span class='timer__label'>min</span>";
+        document.getElementById("timer-mins").innerHTML = ("0"+mins).slice(-2) +
+        "<span class='timer__label'>min</span>";
     
-//         document.getElementById("timer-secs").innerHTML = ("0"+secs).slice(-2) +
-//         "<span class='timer__label'>seg</span>";
+        document.getElementById("timer-secs").innerHTML = ("0"+secs).slice(-2) +
+        "<span class='timer__label'>seg</span>";
     
-//     } else {
+    } else {
 
-//         document.getElementById("timer").innerHTML = "The countdown is over!";
+        document.getElementById("timer").innerHTML = "The countdown is over!";
     
-//     }
+    }
     
-// }, 1000);
+}, 1000);
 
 //end timer

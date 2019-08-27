@@ -32,6 +32,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 a {
     background: transparent;
+    color: #333;
     margin: 0;
     padding: 0;
     font-size: 100%;
@@ -55,10 +56,10 @@ background: linear-gradient(to left, #fb983b, #fce121); /* W3C, IE 10+/ Edge, Fi
 	border: none;
 	display:inline-block;
 	color: #001d3f;
-/*	cursor: pointer;*/
+	cursor: pointer;
 	padding: .5rem 1.5rem;
     transition: all 0.3s ease 0s;		
-	/*transition: .25s;*/
+	transition: .25s;
 }
 
 .btn:hover{
@@ -75,10 +76,14 @@ background: linear-gradient(to left, #fb983b, #fce121); /* W3C, IE 10+/ Edge, Fi
 	}
 	.btn--info{
 		background: transparent;
-		color:#888;
+		color:#333;
 		border-radius:0;
-/*		border-bottom:2px solid #888;*/
+		border-bottom:2px solid #333;
 	}
+		.active {
+			border-bottom:2px solid #0071bc;
+			color:#0071bc;
+		}
 	.btn--outline{
 		background: transparent;
 		color:#888;
@@ -296,8 +301,8 @@ SLIDE ***********************/
 			grid-column:1 / -3;
 		}
 		.calendar__filter{
-			grid-column: 3 / -1;
-			justify-self:end;
+			grid-column: 1 / -1;
+			/*justify-self:end;*/
 			align-self:center;
 		}
 		.calendar__cell img{
@@ -423,7 +428,7 @@ SLIDE ***********************/
 		}
 			.timer__round{
 				border-radius: 50%;
-				border: .2rem solid white;
+				border: .2rem solid rgba(255, 255, 255,0.45);
 				box-shadow: 1px 1px 1px #454545;
 				display: inline-block;
 				font-size: 2rem;
