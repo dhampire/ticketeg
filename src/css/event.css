@@ -42,6 +42,7 @@
 			position: relative;
 			background-clip: content-box;
 			text-align: center;
+			transition: all .3s ease;
 		}
 			.share--social i{
 				background: #e2e2e2;
@@ -49,27 +50,34 @@
 				border-radius: 50%;
 				padding:.5rem;
 			}
-			.twitter:hover{
+			.twitter:hover, .twitter:focus, .twitter:active{
 				background: #1da1f2;
-				color:white;}
-			.facebook:hover{
+				color:white;
+				transition: all .3s ease;}
+			.facebook:hover, .facebook:focus, .facebook:active{
 				background: #3b5998;
-				color:white;}
-			.whatsapp:hover{
+				color:white;
+				transition: all .3s ease;}
+			.whatsapp:hover, .whatsapp:focus, .whatsapp:active{
 				background: #075e54;
-				color:white;}
-			.linkedin:hover{
+				color:white;
+				transition: all .3s ease;}
+			.linkedin:hover, .linkedin:focus, .linkedin:active{
 				background: #0077b5;
-				color:white;}
-			.instagram:hover{
+				color:white;
+				transition: all .3s ease;}
+			.instagram:hover, .instagram:focus, .instagram:active{
 				background: #833ab4;
-				color:white;}
+				color:white;
+				transition: all .3s ease;}
 			.envelope:hover{
 				background: #ffa930;
-				color:white;}
+				color:white;
+				transition: all .3s ease;}
 			.messenger:hover{
 				background: #0084ff;
-				color:white;}
+				color:white;
+				transition: all .3s ease;}
 
 	.sidebar{
 		grid-column:3 / -1;
