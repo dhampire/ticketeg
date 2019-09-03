@@ -5,13 +5,24 @@
     var menu = document.getElementsByClassName('menu')[0];
 
     nav.addEventListener('click', function toggleClasses(){
-      [body, menu, nav].forEach(function (el){
-        el.classList.toggle('open');
+      [body, menu, nav].forEach(function (e){
+        e.classList.toggle('open');
       });
     }, false);
+
   })();
 
+// close menu "ESC"
+var open = document.getElementsByClassName("open");
+  window.onkeyup = function (e) {
+    if (e.keyCode == 27) {
+      while (open.length)
+      open[0].classList.remove("open");
+    }
+}
 
+
+// event filter
 
 filterSelection("all")
 function filterSelection(c) {
@@ -19,12 +30,12 @@ function filterSelection(c) {
   x = document.getElementsByClassName("calendar__cell");
   if (c == "all") c = "";
   for (i = 0; i < x.length; i++) {
-    w3RemoveClass(x[i], "event__show");
-    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "event__show");
+    removeClass(x[i], "event__show");
+    if (x[i].className.indexOf(c) > -1) addClass(x[i], "event__show");
   }
 }
 
-function w3AddClass(element, name) {
+function addClass(element, name) {
   var i, arr1, arr2;
   arr1 = element.className.split(" ");
   arr2 = name.split(" ");
@@ -33,7 +44,7 @@ function w3AddClass(element, name) {
   }
 }
 
-function w3RemoveClass(element, name) {
+function removeClass(element, name) {
   var i, arr1, arr2;
   arr1 = element.className.split(" ");
   arr2 = name.split(" ");
